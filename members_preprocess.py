@@ -32,7 +32,7 @@ def process_age(df):
 # process gender info (in members)
 def process_gender(df):
     df["gender"] = df["gender"].replace({'male': 1, 'female': 0})
-    df["gender"] = df["gender"].fillna(-1)
+    df["gender"].fillna(-1, inplace=True)
 
 
 # read & process members
